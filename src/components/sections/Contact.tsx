@@ -14,16 +14,21 @@ const contactItems = [
 
 const topics = [
   "Website development",
+  "SEO optimization",
   "AI integration",
-  "Process automation",
+  "Business automation",
   "IT consulting",
-  "Microsoft 365",
+  "Digital transformation",
   "Something else",
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 bg-[#030306]">
+    <section
+      id="contact"
+      className="py-20 sm:py-28 md:py-32 px-6 bg-[#030306]"
+      aria-labelledby="contact-heading"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.p
           variants={fadeUp}
@@ -35,7 +40,7 @@ export default function Contact() {
           Contact
         </motion.p>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left */}
           <div>
             <motion.h2
@@ -43,6 +48,7 @@ export default function Contact() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
+              id="contact-heading"
               className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
             >
               Let&apos;s talk about

@@ -28,14 +28,17 @@ const reasons = [
 ];
 
 const stats = [
-  { value: "10+", label: "Services covered" },
+  { value: "8+", label: "Services covered" },
   { value: "100%", label: "Focus on your outcome" },
   { value: "0", label: "Unnecessary complexity" },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="py-32 px-6 bg-[#08080f]">
+    <section
+      className="py-20 sm:py-28 md:py-32 px-6 bg-[#08080f]"
+      aria-labelledby="whyus-heading"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.p
           variants={fadeUp}
@@ -47,7 +50,7 @@ export default function WhyUs() {
           Why work with us
         </motion.p>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left: headline + reasons */}
           <div>
             <motion.h2
@@ -55,7 +58,8 @@ export default function WhyUs() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="text-4xl md:text-5xl font-bold text-white leading-tight mb-14"
+              id="whyus-heading"
+              className="text-4xl md:text-5xl font-bold text-white leading-tight mb-10 md:mb-14"
             >
               The difference is
               <br />

@@ -16,7 +16,10 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Hero"
+    >
       {/* Ambient background blobs */}
       <div
         className="absolute inset-0 pointer-events-none overflow-hidden"
@@ -79,7 +82,7 @@ export default function Hero() {
             className="w-[6px] h-[6px] rounded-full bg-accent-light"
             style={{ animation: "pulse-glow 2.5s ease-in-out infinite" }}
           />
-          Digital & IT Solutions for Modern Businesses
+          Web Design · SEO · AI Integrations · Automation
         </motion.div>
 
         {/* Headline */}
@@ -103,8 +106,9 @@ export default function Hero() {
           custom={0.25}
           className="text-[17px] md:text-lg text-white/45 max-w-xl mx-auto mb-12 leading-relaxed"
         >
-          From high-performance websites to AI automation — we design, build and
-          optimize the technology that actually drives your business.
+          From premium web design and SEO to AI integrations and business
+          automation — we build the digital solutions that move your business
+          forward.
         </motion.p>
 
         {/* CTA buttons */}

@@ -14,26 +14,75 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://ibeestudio.com";
+
 export const metadata: Metadata = {
-  title: "ibee studio — Modern Digital & IT Solutions",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "ibee studio | Web Design, SEO & AI Solutions",
+    template: "%s | ibee studio",
+  },
   description:
-    "We design, build and automate the technology that drives your business forward. Websites, AI integration, automation and IT consulting for modern businesses.",
+    "Premium web design, SEO optimization, AI integrations and business automation for modern businesses. Digital solutions that actually move the needle.",
   keywords: [
-    "web development",
+    "web design",
+    "website development",
+    "SEO optimization",
     "AI integration",
     "business automation",
-    "IT consulting",
+    "digital consulting",
     "digital transformation",
-    "Microsoft 365",
-    "SEO optimization",
+    "custom business tools",
+    "IT consulting",
   ],
+  authors: [{ name: "ibee studio", url: siteUrl }],
+  creator: "ibee studio",
+  publisher: "ibee studio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: "ibee studio — Modern Digital & IT Solutions",
+    title: "ibee studio | Web Design, SEO & AI Solutions",
     description:
-      "Modern digital solutions for businesses that mean it. Websites, AI, automation and IT consulting.",
+      "Premium web design, SEO optimization, AI integrations and business automation for modern businesses.",
+    url: siteUrl,
     siteName: "ibee studio",
     type: "website",
+    locale: "en_US",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "ibee studio | Web Design, SEO & AI Solutions",
+    description:
+      "Premium web design, SEO optimization, AI integrations and business automation for modern businesses.",
+    creator: "@ibeestudio",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "ibee studio",
+  url: siteUrl,
+  email: "info@ibeestudio.com",
+  description:
+    "Premium web design, SEO optimization, AI integrations and business automation for modern businesses.",
+  serviceType: [
+    "Web Design",
+    "Website Development",
+    "SEO Optimization",
+    "AI Integration",
+    "Business Process Automation",
+    "IT Consulting",
+    "Digital Transformation",
+    "Custom Business Tools",
+  ],
+  areaServed: "Worldwide",
 };
 
 export default function RootLayout({
@@ -46,6 +95,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );

@@ -38,7 +38,11 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 px-6 bg-[#030306]">
+    <section
+      id="process"
+      className="py-20 sm:py-28 md:py-32 px-6 bg-[#030306]"
+      aria-labelledby="process-heading"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.p
           variants={fadeUp}
@@ -56,6 +60,7 @@ export default function Process() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
+            id="process-heading"
             className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-md"
           >
             A process built

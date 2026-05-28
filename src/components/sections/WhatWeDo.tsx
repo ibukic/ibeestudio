@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Cpu, Cloud } from "lucide-react";
+import { Globe, Cpu, Compass } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
 
 const pillars = [
@@ -18,16 +18,19 @@ const pillars = [
       "Intelligent tools and automated workflows that eliminate repetitive work and give your team hours back every week.",
   },
   {
-    icon: Cloud,
-    title: "Infrastructure & Cloud",
+    icon: Compass,
+    title: "Digital Consulting",
     description:
-      "Reliable, modern IT systems — from Microsoft 365 to custom cloud setups — configured, secured, and optimized for your business.",
+      "Strategic guidance for technology decisions, IT roadmap planning, and digital transformation — so you move forward with confidence.",
   },
 ];
 
 export default function WhatWeDo() {
   return (
-    <section className="py-32 px-6 bg-[#08080f]">
+    <section
+      className="py-20 sm:py-28 md:py-32 px-6 bg-[#08080f]"
+      aria-labelledby="whatwedo-heading"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.p
           variants={fadeUp}
@@ -39,8 +42,9 @@ export default function WhatWeDo() {
           What we do
         </motion.p>
 
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 md:mb-20">
           <motion.h2
+            id="whatwedo-heading"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -78,10 +82,7 @@ export default function WhatWeDo() {
                 className="group bg-[#08080f] p-8 md:p-10 hover:bg-[#0e0e1a] transition-colors duration-500"
               >
                 <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-7 group-hover:bg-accent/15 transition-colors duration-300">
-                  <Icon
-                    size={18}
-                    className="text-accent-light"
-                  />
+                  <Icon size={18} className="text-accent-light" />
                 </div>
                 <h3 className="text-[17px] font-semibold text-white mb-3">
                   {pillar.title}
