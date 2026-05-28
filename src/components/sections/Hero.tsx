@@ -17,7 +17,7 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
       aria-label="Hero"
     >
       {/* Ambient background blobs */}
@@ -29,7 +29,7 @@ export default function Hero() {
           className="absolute -top-[200px] -left-[200px] w-[700px] h-[700px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 65%)",
             filter: "blur(80px)",
             animation: "float-slow 10s ease-in-out infinite",
           }}
@@ -38,7 +38,7 @@ export default function Hero() {
           className="absolute -top-[100px] right-0 w-[550px] h-[550px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(124,58,237,0.05) 0%, transparent 65%)",
             filter: "blur(100px)",
             animation: "float-slow-alt 13s ease-in-out infinite 2s",
           }}
@@ -47,7 +47,7 @@ export default function Hero() {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%)",
             filter: "blur(90px)",
             animation: "float-slow 15s ease-in-out infinite 5s",
           }}
@@ -55,10 +55,10 @@ export default function Hero() {
 
         {/* Dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.15]"
+          className="absolute inset-0 opacity-[0.5]"
           style={{
             backgroundImage:
-              "radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px)",
+              "radial-gradient(circle, rgba(15,23,42,0.07) 1px, transparent 1px)",
             backgroundSize: "42px 42px",
             maskImage:
               "radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%)",
@@ -76,10 +76,10 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.04] text-[13px] text-white/50 mb-10 tracking-wide"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] text-[13px] text-[#64748B] mb-10 tracking-wide"
         >
           <span
-            className="w-[6px] h-[6px] rounded-full bg-accent-light"
+            className="w-[6px] h-[6px] rounded-full bg-accent"
             style={{ animation: "pulse-glow 2.5s ease-in-out infinite" }}
           />
           Web Design · SEO · AI Integrations · Automation
@@ -93,9 +93,9 @@ export default function Hero() {
           custom={0.1}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-bold leading-[1.06] tracking-tight mb-7"
         >
-          <span className="text-white block">Modern digital</span>
+          <span className="text-[#0F172A] block">Modern digital</span>
           <span className="gradient-text block">solutions for businesses</span>
-          <span className="text-white block">that mean it.</span>
+          <span className="text-[#0F172A] block">that mean it.</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -104,7 +104,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0.25}
-          className="text-[17px] md:text-lg text-white/45 max-w-xl mx-auto mb-12 leading-relaxed"
+          className="text-[17px] md:text-lg text-[#475569] max-w-xl mx-auto mb-12 leading-relaxed"
         >
           From premium web design and SEO to AI integrations and business
           automation — we build the digital solutions that move your business
@@ -121,7 +121,7 @@ export default function Hero() {
         >
           <a
             href="mailto:info@ibeestudio.com"
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-accent hover:bg-accent-light text-white font-medium text-[15px] transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] group"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-accent hover:bg-accent-light text-white font-medium text-[15px] transition-all duration-300 hover:shadow-[0_4px_20px_rgba(37,99,235,0.35)] group"
           >
             Start a project
             <ArrowRight
@@ -131,7 +131,7 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border border-white/[0.09] text-white/60 hover:text-white hover:border-white/20 font-medium text-[15px] transition-all duration-300 hover:bg-white/[0.03]"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#CBD5E1] hover:bg-[#F8FAFC] font-medium text-[15px] transition-all duration-300"
           >
             Explore services
           </a>
@@ -145,13 +145,16 @@ export default function Hero() {
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
           aria-hidden="true"
         >
-          <span className="text-[10px] tracking-[0.2em] uppercase text-white/20">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[#CBD5E1]">
             scroll
           </span>
           <div className="w-px h-14 relative overflow-hidden">
             <div
-              className="absolute top-0 w-full h-full bg-gradient-to-b from-white/25 to-transparent"
-              style={{ animation: "scroll-down 1.8s ease-in-out infinite" }}
+              className="absolute top-0 w-full h-full"
+              style={{
+                background: "linear-gradient(to bottom, rgba(148,163,184,0.6), transparent)",
+                animation: "scroll-down 1.8s ease-in-out infinite",
+              }}
             />
           </div>
         </motion.div>

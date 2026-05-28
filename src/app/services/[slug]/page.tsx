@@ -62,30 +62,30 @@ export default async function ServicePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navigation />
-      <main className="min-h-screen bg-[#030306] pt-32 pb-24 px-6">
+      <main className="min-h-screen bg-white pt-32 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-[13px] text-white/25 mb-12" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white/50 transition-colors">
+          <nav className="flex items-center gap-2 text-[13px] text-[#94A3B8] mb-12" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-[#475569] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-white/50 transition-colors">
+            <Link href="/services" className="hover:text-[#475569] transition-colors">
               Services
             </Link>
             <span>/</span>
-            <span className="text-white/50">{service.title}</span>
+            <span className="text-[#475569]">{service.title}</span>
           </nav>
 
           {/* Header */}
           <div className="mb-16">
-            <p className="text-accent-light text-[11px] tracking-[0.22em] uppercase font-medium mb-5">
+            <p className="text-accent text-[11px] tracking-[0.22em] uppercase font-medium mb-5">
               {service.number} — Service
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-7">
+            <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A] leading-tight mb-7">
               {service.title}
             </h1>
-            <p className="text-[17px] md:text-lg text-white/50 max-w-2xl leading-relaxed">
+            <p className="text-[17px] md:text-lg text-[#475569] max-w-2xl leading-relaxed">
               {service.longDescription}
             </p>
           </div>
@@ -93,14 +93,14 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 mb-20">
             {/* Features */}
             <div>
-              <h2 className="text-[13px] tracking-[0.18em] uppercase text-white/30 mb-7 font-medium">
+              <h2 className="text-[13px] tracking-[0.18em] uppercase text-[#94A3B8] mb-7 font-medium">
                 What&apos;s included
               </h2>
               <ul className="space-y-4">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent-light mt-2 shrink-0" />
-                    <span className="text-[15px] text-white/60 leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
+                    <span className="text-[15px] text-[#475569] leading-relaxed">
                       {feature}
                     </span>
                   </li>
@@ -111,10 +111,10 @@ export default async function ServicePage({ params }: Props) {
             {/* CTA card */}
             <div className="glass-card rounded-3xl p-8 md:p-10 flex flex-col justify-between gap-8">
               <div>
-                <h2 className="text-[20px] font-semibold text-white mb-3">
+                <h2 className="text-[20px] font-semibold text-[#0F172A] mb-3">
                   Ready to get started?
                 </h2>
-                <p className="text-[14px] text-white/40 leading-relaxed">
+                <p className="text-[14px] text-[#64748B] leading-relaxed">
                   Tell us about your project. We&apos;ll respond within one
                   business day with an honest assessment and a clear path
                   forward.
@@ -123,13 +123,13 @@ export default async function ServicePage({ params }: Props) {
               <div className="flex flex-col gap-3">
                 <a
                   href={`mailto:info@ibeestudio.com?subject=${encodeURIComponent(service.title)}`}
-                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-accent hover:bg-accent-light text-white font-medium text-[14px] transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.35)]"
+                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-accent hover:bg-accent-light text-white font-medium text-[14px] transition-all duration-300 hover:shadow-[0_4px_16px_rgba(37,99,235,0.3)]"
                 >
                   Start with {service.title}
                 </a>
                 <Link
                   href="/services"
-                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-white/[0.08] text-white/50 hover:text-white hover:border-white/20 font-medium text-[14px] transition-all duration-300"
+                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#CBD5E1] hover:bg-[#F8FAFC] font-medium text-[14px] transition-all duration-300"
                 >
                   View all services
                 </Link>
@@ -139,8 +139,8 @@ export default async function ServicePage({ params }: Props) {
 
           {/* Related services */}
           {related.length > 0 && (
-            <div className="border-t border-white/[0.05] pt-16">
-              <p className="text-[13px] tracking-[0.18em] uppercase text-white/25 mb-8 font-medium">
+            <div className="border-t border-[#E2E8F0] pt-16">
+              <p className="text-[13px] tracking-[0.18em] uppercase text-[#94A3B8] mb-8 font-medium">
                 Other services
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
@@ -148,15 +148,15 @@ export default async function ServicePage({ params }: Props) {
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="group glass-card rounded-xl p-5 border-glow transition-all duration-300"
+                    className="group glass-card rounded-xl p-5 border-glow transition-all duration-300 hover:-translate-y-0.5"
                   >
-                    <p className="text-[11px] font-mono text-white/20 mb-2">
+                    <p className="text-[11px] font-mono text-[#CBD5E1] mb-2">
                       {s.number}
                     </p>
-                    <h3 className="text-[15px] font-semibold text-white mb-1.5 group-hover:text-accent-light transition-colors duration-200">
+                    <h3 className="text-[15px] font-semibold text-[#0F172A] mb-1.5 group-hover:text-accent transition-colors duration-200">
                       {s.title}
                     </h3>
-                    <p className="text-[13px] text-white/35 leading-snug">
+                    <p className="text-[13px] text-[#64748B] leading-snug">
                       {s.shortDescription.split(".")[0]}.
                     </p>
                   </Link>

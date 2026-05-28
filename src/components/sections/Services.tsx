@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 sm:py-28 md:py-32 px-6 bg-[#030306]"
+      className="py-20 sm:py-28 md:py-32 px-6 bg-white"
       aria-labelledby="services-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -40,7 +40,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="text-accent-light text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
+          className="text-accent text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
         >
           Services
         </motion.p>
@@ -52,7 +52,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-md"
+            className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight max-w-md"
           >
             Everything you need.
             <br />
@@ -68,7 +68,7 @@ export default function Services() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[14px] text-white/40 hover:text-white transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 text-[14px] text-[#64748B] hover:text-[#0F172A] transition-colors duration-200 group"
             >
               View all services
               <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -92,20 +92,20 @@ export default function Services() {
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group glass-card rounded-2xl p-6 md:p-7 border-glow transition-all duration-300 flex flex-col h-full"
+                  className="group glass-card rounded-2xl p-6 md:p-7 border-glow transition-all duration-300 flex flex-col h-full hover:-translate-y-0.5"
                 >
                   <div className="flex items-start justify-between mb-5">
-                    <div className="w-9 h-9 rounded-lg bg-accent/[0.08] border border-accent/[0.15] flex items-center justify-center group-hover:bg-accent/[0.14] transition-colors duration-300">
-                      {Icon && <Icon size={16} className="text-accent-light" />}
+                    <div className="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300">
+                      {Icon && <Icon size={16} className="text-accent" />}
                     </div>
-                    <span className="text-[11px] font-mono text-white/20">
+                    <span className="text-[11px] font-mono text-[#CBD5E1]">
                       {service.number}
                     </span>
                   </div>
-                  <h3 className="text-[16px] font-semibold text-white mb-2.5">
+                  <h3 className="text-[16px] font-semibold text-[#0F172A] mb-2.5">
                     {service.title}
                   </h3>
-                  <p className="text-[14px] text-white/40 leading-relaxed">
+                  <p className="text-[14px] text-[#64748B] leading-relaxed">
                     {service.shortDescription}
                   </p>
                 </Link>

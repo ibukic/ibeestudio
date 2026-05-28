@@ -40,7 +40,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="py-20 sm:py-28 md:py-32 px-6 bg-[#030306]"
+      className="py-20 sm:py-28 md:py-32 px-6 bg-white"
       aria-labelledby="process-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -49,7 +49,7 @@ export default function Process() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="text-accent-light text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
+          className="text-accent text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
         >
           How we work
         </motion.p>
@@ -61,7 +61,7 @@ export default function Process() {
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
             id="process-heading"
-            className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-md"
+            className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight max-w-md"
           >
             A process built
             <br />
@@ -73,7 +73,7 @@ export default function Process() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="text-white/35 max-w-xs text-[14px] leading-relaxed"
+            className="text-[#64748B] max-w-xs text-[14px] leading-relaxed"
           >
             Every engagement follows a structured process that keeps work
             focused, communication clear, and outcomes predictable.
@@ -84,7 +84,7 @@ export default function Process() {
         <div className="relative">
           {/* Vertical connector line (desktop) */}
           <div
-            className="hidden lg:block absolute left-[39px] top-6 bottom-6 w-px bg-gradient-to-b from-accent/30 via-accent/10 to-transparent"
+            className="hidden lg:block absolute left-[39px] top-6 bottom-6 w-px bg-gradient-to-b from-accent/25 via-accent/08 to-transparent"
             aria-hidden="true"
           />
 
@@ -97,20 +97,20 @@ export default function Process() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: i * 0.08 }}
-                className="group flex gap-8 items-start glass-card rounded-2xl p-7 border-glow transition-all duration-300"
+                className="group flex gap-8 items-start glass-card rounded-2xl p-7 border-glow transition-all duration-300 hover:-translate-y-0.5"
               >
                 {/* Step number badge */}
-                <div className="shrink-0 w-8 h-8 rounded-full bg-accent/[0.09] border border-accent/[0.2] flex items-center justify-center group-hover:bg-accent/[0.16] transition-colors duration-300">
-                  <span className="text-[11px] font-semibold font-mono text-accent-light">
+                <div className="shrink-0 w-8 h-8 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300">
+                  <span className="text-[11px] font-semibold font-mono text-accent">
                     {step.step}
                   </span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:items-start sm:gap-16 flex-1">
-                  <h3 className="text-[17px] font-semibold text-white min-w-[120px] mb-2 sm:mb-0">
+                  <h3 className="text-[17px] font-semibold text-[#0F172A] min-w-[120px] mb-2 sm:mb-0">
                     {step.title}
                   </h3>
-                  <p className="text-[14px] text-white/45 leading-relaxed flex-1">
+                  <p className="text-[14px] text-[#475569] leading-relaxed flex-1">
                     {step.description}
                   </p>
                 </div>

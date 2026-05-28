@@ -36,7 +36,7 @@ const stats = [
 export default function WhyUs() {
   return (
     <section
-      className="py-20 sm:py-28 md:py-32 px-6 bg-[#08080f]"
+      className="py-20 sm:py-28 md:py-32 px-6 bg-[#F8FAFC]"
       aria-labelledby="whyus-heading"
     >
       <div className="max-w-6xl mx-auto">
@@ -45,7 +45,7 @@ export default function WhyUs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="text-accent-light text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
+          className="text-accent text-[11px] tracking-[0.22em] uppercase font-medium mb-5"
         >
           Why work with us
         </motion.p>
@@ -59,7 +59,7 @@ export default function WhyUs() {
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
               id="whyus-heading"
-              className="text-4xl md:text-5xl font-bold text-white leading-tight mb-10 md:mb-14"
+              className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight mb-10 md:mb-14"
             >
               The difference is
               <br />
@@ -77,14 +77,14 @@ export default function WhyUs() {
                   transition={{ delay: i * 0.08 }}
                   className="flex gap-4"
                 >
-                  <div className="w-6 h-6 rounded-full bg-accent/10 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check size={12} className="text-accent-light" />
+                  <div className="w-6 h-6 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check size={12} className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-[16px] font-semibold text-white mb-1.5">
+                    <h3 className="text-[16px] font-semibold text-[#0F172A] mb-1.5">
                       {reason.title}
                     </h3>
-                    <p className="text-[14px] text-white/45 leading-relaxed">
+                    <p className="text-[14px] text-[#475569] leading-relaxed">
                       {reason.description}
                     </p>
                   </div>
@@ -108,27 +108,27 @@ export default function WhyUs() {
                 className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none"
                 style={{
                   background:
-                    "radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%)",
+                    "radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%)",
                   filter: "blur(40px)",
                 }}
                 aria-hidden="true"
               />
-              <p className="text-[15px] text-white/50 leading-relaxed mb-6 relative z-10">
+              <p className="text-[15px] text-[#475569] leading-relaxed mb-6 relative z-10">
                 &ldquo;We approach every project as a long-term business
                 partnership. The goal isn&apos;t to deliver code — it&apos;s to
                 deliver results that compound over time.&rdquo;
               </p>
               <div className="flex items-center gap-3 relative z-10">
-                <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-accent-light">
+                <div className="w-8 h-8 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-accent">
                     ib
                   </span>
                 </div>
                 <div>
-                  <p className="text-[13px] font-medium text-white">
+                  <p className="text-[13px] font-medium text-[#0F172A]">
                     ibee studio
                   </p>
-                  <p className="text-[12px] text-white/35">
+                  <p className="text-[12px] text-[#94A3B8]">
                     info@ibeestudio.com
                   </p>
                 </div>
@@ -150,7 +150,7 @@ export default function WhyUs() {
                   <div className="text-2xl font-bold gradient-text-brand mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-[11px] text-white/35 leading-tight">
+                  <div className="text-[11px] text-[#64748B] leading-tight">
                     {stat.label}
                   </div>
                 </motion.div>
